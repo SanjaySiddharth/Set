@@ -11,8 +11,8 @@ import SwiftUI
 class ViewModel:ObservableObject{
     typealias SetModelType = SetModel<AnyView,Color,String>
     typealias Card = SetModel<AnyView,Color,String>.Card
-    static let cardShapes : Array<AnyView> = [AnyView(Diamond()),AnyView(Oval()),AnyView(Squiggles())]
-    static let cardColors : Array<Color> = [Color.white,Color.black,Color.red]
+    static let cardShapes : Array<AnyView> = [AnyView(Diamond()),AnyView(RoundedRectangle(cornerRadius: 50)),AnyView(Squiggles())]
+    static let cardColors : Array<Color> = [Color.red,Color.purple,Color.green]
     static let cardPatterns : Array<String> = ["Solid","Striped","Outlined"]
     static let cardMultiples : [Int] = [1,2,3]
     //static let cardMultiples : Array<Range<Int>> = [1..<2,1..<3,1..<4]

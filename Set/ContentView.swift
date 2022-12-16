@@ -15,6 +15,7 @@ struct ContentView: View {
                 ForEach(game.cards){ card in
                     CardView(card: card)
                         .aspectRatio(2/3, contentMode: .fit)
+                        
                 }
             }
             .padding(.horizontal)
@@ -33,10 +34,14 @@ struct CardView:View{
         let multiple = card.content.multiple
         
         ZStack{
-            RoundedRectangle(cornerRadius: 10).fill().foregroundColor(.green)
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(lineWidth: 2)
+                .foregroundColor(.black)
             VStack{
                 ForEach(0..<multiple,id: \.self){_ in
-                    shape.foregroundColor(color)
+                    shape
+                        .foregroundColor(color)
+                        
                 }
             }
             .padding()

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Diamond: Shape {
+struct Diamond:Shape{
     let firstAngle = Angle(radians: 0-90)
     let secondAngle = Angle(radians: 90-90)
     let thirdAngle = Angle(radians: 180-90)
